@@ -174,7 +174,7 @@ Route::prefix('expense-sheets')->group(function () {
 Route::prefix('expenses')->group(function () {
 
     Route::get('/{expense}/one', 'ExpenseController@getOne');
-    Route::put('{expense}', 'ExpenseController@updateOne');
+    Route::put('/update/{expense}', 'ExpenseController@updateOne');
     Route::get('/{state}/state', 'ExpenseController@getAllByState');
     Route::get('/expense-sheet/expense-in/{expenseSheet}/all', 'ExpenseController@getExpenseInPackagesByExpenseSheet');
     Route::get('/expense-sheet/expense-out/{expenseSheet}/all', 'ExpenseController@getExpenseOutPackagesByExpenseSheet');
